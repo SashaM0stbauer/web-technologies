@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Завдання 3 — Анкета користувача</title>
+</head>
+<body>
+  <h2>Анкета користувача</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Особисті дані</legend>
+      <label>Ім'я:
+        <input type="text" name="name" placeholder="Введіть ім’я" required tabindex="1">
+      </label><br>
+
+      <label>Пароль:
+        <input type="password" name="password" placeholder="6 символів" 
+               pattern="(?=^.{6}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$"
+               title="6 символів: велика, мала літера та цифра" required tabindex="2">
+      </label><br>
+
+      <label>Email:
+        <input type="email" name="email" placeholder="example@gmail.com" 
+               autocomplete="off" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               required tabindex="3">
+      </label><br>
+
+      <label>Телефон:
+        <input type="tel" name="phone" placeholder="+380XXXXXXXXX"
+               pattern="^\+?\d{9,15}$"
+               title="Введіть коректний номер" required tabindex="4">
+      </label><br>
+
+      <label>Дата народження:
+        <input type="date" name="birth" required tabindex="5">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Вибір варіантів</legend>
+      <p>Стать:</p>
+      <label><input type="radio" name="gender" value="male" required> Чоловіча</label>
+      <label><input type="radio" name="gender" value="female"> Жіноча</label>
+      <label><input type="radio" name="gender" value="other"> Інша</label><br>
+
+      <p>Хобі:</p>
+      <label><input type="checkbox" name="hobby" value="sport"> Спорт</label>
+      <label><input type="checkbox" name="hobby" value="music"> Музика</label>
+      <label><input type="checkbox" name="hobby" value="reading"> Читання</label>
+      <label><input type="checkbox" name="hobby" value="coding"> Програмування</label><br>
+
+      <label>Місто:
+        <select name="city" required>
+          <option value="kyiv">Київ</option>
+          <option value="lviv" selected>Львів</option>
+          <option value="odesa">Одеса</option>
+          <option value="kharkiv">Харків</option>
+          <option value="dnipro">Дніпро</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Додатково</legend>
+      <label>Про себе:<br>
+        <textarea name="about" rows="3" placeholder="Коротко про себе..."></textarea>
+      </label><br>
+
+      <label>Завантажте аудіофайли:
+        <input type="file" name="audio" accept="audio/*" multiple>
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Надіслати">
+    <input type="reset" value="Очистити">
+  </form>
+</body>
+</html>
