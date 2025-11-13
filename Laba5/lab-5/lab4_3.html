@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна 4.3 — Оформлення форми</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form method="post" enctype="multipart/form-data">
+    <h2>Анкета користувача</h2>
+    <fieldset>
+      <legend>Особисті дані</legend>
+      <label>Ім'я:
+        <input type="text" name="name" placeholder="Введіть ім’я" required>
+      </label>
+      <label>Пароль:
+        <input type="password" name="password" placeholder="6 символів" required>
+      </label>
+      <label>Email:
+        <input type="email" name="email" placeholder="example@gmail.com" required>
+      </label>
+      <label>Телефон:
+        <input type="tel" name="phone" placeholder="+380XXXXXXXXX" required>
+      </label>
+      <label>Дата народження:
+        <input type="date" name="birth" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Вибір варіантів</legend>
+      <label>Стать:
+        <input type="radio" name="gender" value="male" required> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча
+      </label>
+      <label>Хобі:
+        <input type="checkbox" name="hobby" value="sport"> Спорт
+        <input type="checkbox" name="hobby" value="music"> Музика
+        <input type="checkbox" name="hobby" value="reading"> Читання
+      </label>
+      <label>Місто:
+        <select name="city" required>
+          <option value="kyiv">Київ</option>
+          <option value="lviv" selected>Львів</option>
+          <option value="odesa">Одеса</option>
+          <option value="kharkiv">Харків</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Додатково</legend>
+      <label>Про себе:
+        <textarea name="about" rows="3" placeholder="Коротко про себе..."></textarea>
+      </label>
+      <label>Завантажте аудіофайли:
+        <input type="file" name="audio" accept="audio/*" multiple>
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Надіслати">
+    <input type="reset" value="Очистити">
+  </form>
+</body>
+</html>

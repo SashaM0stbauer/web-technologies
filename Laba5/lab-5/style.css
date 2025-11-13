@@ -1,0 +1,190 @@
+
+/* ===== CSS спільний для всіх трьох завдань ===== */
+
+/* Загальні стилі сторінки */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e6f0ff, #c2d9ff);
+  color: #222;
+}
+
+/* ===== Завдання 1 ===== */
+div {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.firstLevel > li {
+    background-color: rgb(103, 158, 128);
+    padding: 0 20px 0  50px;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+.secondLevel > li {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+span {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.firstLevel > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+.secondLevel > li > span {
+    background-color: rgb(218, 106, 32);
+}
+
+.prepare {
+    background-image: url("assets/rule.png"); 
+}
+
+.rest {
+    background-image: url("assets/rule.png"); 
+}
+
+.route { 
+    background-image: url("assets/ad_units.png");
+}
+.ticket {
+    background-image: url("assets/airplane_ticket.png");
+}
+.hotel {
+    background-image: url("assets/hotel.png");
+}
+.car {
+    background-image: url("assets/car_rental.png"); 
+}
+
+.bar { 
+    background-image: url("assets/local_bar.png"); 
+}
+.casino { 
+    background-image: url("assets/casino.png"); 
+}
+.museum { 
+    background-image: url("assets/museum.png"); 
+}
+.festival {
+    background-image: url("assets/festival.png");
+}
+
+/* ===== Завдання 2 ===== */
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 40px auto;
+  text-align: center;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid #fff;
+}
+
+thead tr {
+  background-color: #b3d1ff;
+  color: #002b80;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(1) { background-color: #99c2ff; }
+tbody tr:nth-child(2) { background-color: #80b3ff; }
+tbody tr:nth-child(3) { background-color: #66a3ff; }
+tbody tr:nth-child(4) { background-color: #4d94ff; }
+tbody tr:nth-child(5) { background-color: #3385ff; }
+tbody tr:nth-child(6) { background-color: #1a75ff; }
+tbody tr:nth-child(7) { background-color: #0066ff; }
+
+/* ===== Завдання 3 ===== */
+form {
+  width: 60%;
+  margin: 30px auto;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+}
+
+form h2 {
+  text-align: center;
+  color: #0047b3;
+}
+
+fieldset {
+  border: 2px solid #99b3ff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #003399;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"], input[type="reset"] {
+  width: 48%;
+  margin-top: 10px;
+  background-color: #0066ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  background-color: #99b3ff;
+}
+
+input[type="submit"]:hover {
+  background-color: #0047b3;
+}
+
+input[type="reset"]:hover {
+  background-color: #668cff;
+}
