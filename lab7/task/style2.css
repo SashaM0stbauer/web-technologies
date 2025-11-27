@@ -1,0 +1,105 @@
+/* Загальні стилі та форматування тексту */
+.container {
+    width: 600px;
+    margin: 50px auto;
+    position: relative; /* Базовий контекст для абсолютно позиціонованих елементів */
+}
+
+.block {
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* 1. Стилі для Блоків 1-x (контролюючі блоки) */
+.block-1-1 {
+    background-color: #28a745; /* Зелений */
+    width: 150px;
+    height: 50px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.block-1-2 {
+    background-color: #28a745; /* Зелений */
+    width: 400px;
+    height: 50px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/* 2. Стилі для Блоків 2-x (приховані/з'являючі блоки) */
+.block-2-1 {
+    background-color: #007bff; /* Синій */
+    width: 150px;
+    height: 150px;
+    line-height: 130px;
+    /* Початкове приховування */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; /* Плавний перехід */
+    position: absolute; /* Позиціонування, щоб не впливати на потік до з'явлення */
+    z-index: 5;
+}
+
+.block-2-2 {
+    background-color: #007bff; /* Синій */
+    width: 400px;
+    height: 200px;
+    line-height: 180px;
+    /* Початкове приховування */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; /* Плавний перехід */
+    position: absolute; /* Позиціонування, щоб не впливати на потік до з'явлення */
+    z-index: 5;
+}
+
+
+/* 3. Розташування блоків (з використанням float для базової структури) */
+.group-1 {
+    float: left;
+    margin-right: 10px; /* Відступ між групами */
+    position: relative;
+    /* Це батьківський елемент для блоку 1-1 і 2-1, що дозволить нам їх позиціонувати */
+}
+
+.group-2 {
+    float: left;
+    position: relative;
+}
+
+/* 4. Фінальне позиціонування блоків 2-x відносно їх контейнерів/сусідів */
+
+/* Позиціонування Блоку 2-1: під Блоком 1-1 */
+.group-1 .block-2-1 {
+    top: 50px; /* Відразу під Блоком 1-1 (висота Блоку 1-1) */
+    left: 0;
+}
+
+/* Позиціонування Блоку 2-2: праворуч */
+.group-2 .block-2-2 {
+    top: 0;
+    left: 0;
+}
+
+/* 5. Логіка з'явлення за допомогою :hover */
+
+/* При наведенні на Блок 1-1 з'являється Блок 2-1 */
+.group-1:hover .block-2-1 {
+    opacity: 1; 
+}
+
+/* При наведенні на Блок 1-2 з'являється Блок 2-2 */
+.group-2:hover .block-2-2 {
+    opacity: 1;
+}
+
+/* Переконаємось, що Блок 1-2 знаходиться поверх прихованого Блоку 2-2, 
+   щоб на нього можна було навести курсор. */
+.group-2 .block-1-2 {
+    position: absolute;
+    bottom: 0; /* Розміщуємо його внизу великого контейнера group-2 */
+    left: 0;
+}

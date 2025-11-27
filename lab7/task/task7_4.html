@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 4</title>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="stylesheet" href="style_4.css">
+</head>
+<body>
+
+<nav class="horizontal-nav">
+  <ul class="horizontal-nav__list">
+
+    <li class="horizontal-nav__item horizontal-nav__item--active">
+      <a href="#" class="horizontal-nav__link">
+        <span class="material-symbols-outlined horizontal-nav__icon">home</span>
+      </a>
+    </li>
+
+    <li class="horizontal-nav__item horizontal-nav__item--dropdown">
+      <input type="checkbox" id="h-menu-search" class="horizontal-nav__toggle">
+
+      <label for="h-menu-search" class="horizontal-nav__link">
+        <span class="material-symbols-outlined horizontal-nav__icon">search</span>
+      </label>
+
+      <ul class="horizontal-nav__submenu">
+        <li class="horizontal-nav__submenu-item">
+          <a href="#" class="horizontal-nav__submenu-link">Search Page</a>
+        </li>
+        <li class="horizontal-nav__submenu-item">
+          <a href="#" class="horizontal-nav__submenu-link">Advanced Search</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="horizontal-nav__item horizontal-nav__item--dropdown horizontal-nav__item--push-right">
+      <input type="checkbox" id="h-menu-mail" class="horizontal-nav__toggle">
+
+      <label for="h-menu-mail" class="horizontal-nav__link">
+        <span class="material-symbols-outlined horizontal-nav__icon">mail</span>
+      </label>
+
+      <ul class="horizontal-nav__submenu">
+        <li class="horizontal-nav__submenu-item">
+          <a href="#" class="horizontal-nav__submenu-link">Inbox</a>
+        </li>
+        <li class="horizontal-nav__submenu-item">
+          <a href="#" class="horizontal-nav__submenu-link">Compose</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<nav class="vertical-nav">
+  <ul class="vertical-nav__list">
+
+    <li class="vertical-nav__item">
+      <a href="#" class="vertical-nav__link">
+        <span class="material-symbols-outlined vertical-nav__icon">home</span>
+        <span class="vertical-nav__text">Home</span>
+      </a>
+    </li>
+
+    <li class="vertical-nav__item vertical-nav__item--has-submenu">
+      <input type="checkbox" id="v-menu-about" class="vertical-nav__toggle">
+
+      <label for="v-menu-about" class="vertical-nav__link">
+        <span class="material-symbols-outlined vertical-nav__icon">feed</span>
+        <span class="vertical-nav__text">About</span>
+        <span class="material-symbols-outlined vertical-nav__arrow">expand_more</span>
+      </label>
+
+      <ul class="vertical-nav__list vertical-nav__list--level-2">
+        <li class="vertical-nav__item vertical-nav__item--level-2">
+          <a href="#" class="vertical-nav__link vertical-nav__link--level-2">
+            <span class="vertical-nav__text">Our Team</span>
+          </a>
+        </li>
+
+        <li class="vertical-nav__item vertical-nav__item--level-2 vertical-nav__item--has-submenu">
+          <input type="checkbox" id="v-menu-history" class="vertical-nav__toggle">
+          <label for="v-menu-history" class="vertical-nav__link vertical-nav__link--level-2">
+            <span class="vertical-nav__text">History</span>
+            <span class="material-symbols-outlined vertical-nav__arrow">expand_more</span>
+          </label>
+
+          <ul class="vertical-nav__list vertical-nav__list--level-3">
+            <li class="vertical-nav__item vertical-nav__item--level-3">
+              <a href="#" class="vertical-nav__link vertical-nav__link--level-3">
+                <span class="vertical-nav__text">Ancient</span>
+              </a>
+            </li>
+            <li class="vertical-nav__item vertical-nav__item--level-3">
+              <a href="#" class="vertical-nav__link vertical-nav__link--level-3">
+                <span class="vertical-nav__text">Modern</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li class="vertical-nav__item">
+      <a href="#" class="vertical-nav__link">
+        <span class="material-symbols-outlined vertical-nav__icon">work</span>
+        <span class="vertical-nav__text">Work With Me</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+</main>
+
+</body>
+</html>
