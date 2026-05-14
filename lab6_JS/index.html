@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР №6 - Олександр Мостбауер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Мій Інтернет-Магазин</h1>
+        <div id="total-price-container">Загальна вартість: <span id="total-price">0</span> грн</div>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div id="filter-container">
+                <button onclick="setFilter('all')">Всі</button>
+                <button onclick="setFilter('Дім')">Дім</button>
+                <button onclick="setFilter('Одяг')">Одяг</button>
+                <button onclick="setFilter('Електроніка')">Електроніка</button>
+            </div>
+            
+            <div id="sort-container">
+                <button onclick="setSort('price')">Сортувати за ціною</button>
+                <button onclick="setSort('name')">Сортувати за назвою</button>
+                <button onclick="resetFilters()">Скинути все</button>
+            </div>
+        </section>
+
+        <section id="products-section">
+            <div id="products-list"></div>
+            <button onclick="openModal()" class="add-btn">Додати новий товар</button>
+        </section>
+
+        <hr>
+
+        <section id="todo-section">
+            <h2>Список завдань</h2>
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Що потрібно зробити?" required>
+                <button type="submit">Додати завдання</button>
+            </form>
+            <div class="todo-sort-btns">
+                <button onclick="sortTodos('status')">За статусом</button>
+                <button onclick="sortTodos('date')">За датою</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </section>
+    </main>
+
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Інформація про товар</h3>
+            <form id="product-form">
+                <input type="hidden" id="edit-id">
+                <input type="text" id="p-name" placeholder="Назва" required>
+                <input type="number" id="p-price" placeholder="Ціна" required min="0">
+                <select id="p-category" required>
+                    <option value="Електроніка">Електроніка</option>
+                    <option value="Одяг">Одяг</option>
+                    <option value="Дім">Дім</option>
+                </select>
+                <input type="url" id="p-img" placeholder="URL зображення (необов'язково)">
+                <div class="modal-buttons">
+                    <button type="submit">Зберегти</button>
+                    <button type="button" onclick="closeModal()">Скасувати</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="snackbar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
